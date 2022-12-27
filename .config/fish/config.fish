@@ -9,9 +9,11 @@ set fish_greeting
 figlet Kiefciman | gterm "#7aa2f7" "#7aa2f7"
 #colorscript -e 45
 #echo "" && pfetch
-#starship init fish | source
+starship init fish | source
 #clear && ~/pokemon-icat/pokemon-icat.sh
 #pokemon-colorscripts -r --no-title
+set fish_cursor_default block
+set fish_cursor_insert block
 
 ###########
 # Aliases #

@@ -76,3 +76,6 @@ SETUVAR pure_symbol_prompt:\u276f
 SETUVAR pure_symbol_reverse_prompt:\u276e
 SETUVAR pure_symbol_title_bar_separator:\x2d
 SETUVAR pure_threshold_command_duration:5
+
+SETUVAR fish_cursor_default:block
+SETUVAR fish_cursor_insert:block
