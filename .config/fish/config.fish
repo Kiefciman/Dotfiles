@@ -50,6 +50,7 @@ alias ls='ptls -a'
 alias la='ptls -la'
 alias pwd='ptpwd'
 alias dotfiles='/usr/bin/git --git-dir=$HOME/Github/Dotfiles/ --work-tree=$HOME'
+alias animu='cd ~/scripts/animu/; ./animu.sh $1; cd'
 
 ############################
 # Catppuccin color palette #
