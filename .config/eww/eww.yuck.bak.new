@@ -1,0 +1,183 @@
+(defpoll hour :interval "1s" `date +%H`)
+(defpoll minute :interval "1s" `date +%M`)
+(defpoll second :interval "1s" `date +%S`)
+(defpoll calendar_day :interval "10h"
+    "date '+%d'")
+(defpoll calendar_month :interval "10h"
+    "scripts/calendar")
+(defpoll calendar_year :interval "10h"
+    "date '+%Y'")
+(defpoll art		:interval "5s"  "~/.config/qtile/music.sh coverloc")
+(defpoll title		:interval "5s"  "~/.config/qtile/music.sh title")
+(defpoll artist		:interval "5s"  "~/.config/qtile/music.sh artist")
+(defpoll playpause	:interval "5s"  "~/.config/qtile/music.sh statusicon")
+(defpoll songtime 	:interval "1s"  "~/.config/qtile/song-duration.sh")
+(deflisten timer :interval "1s" "~/scripts/stopwatch.sh")
+(defpoll todo_total :interval "5s" "~/scripts/todo.sh")
+(deflisten todo_today :interval "5s" "~/scripts/todo.sh today")
+(deflisten todo_unsch :interval "5s" "~/scripts/todo.sh unsch")
+(deflisten temp :interval "3h" "~/scripts/weather.sh temp")
+(defpoll weatherascii :interval "3h" "~/scripts/weather.sh ascii")
+(deflisten weather :interval "3h" "~/scripts/weather.sh weather")
+
+(defwidget dashboardwidget []
+	(box :orientation "h"
+	(box :class "base"
+		:orientation "v"
+		:valign "top"
+		:space-evenly false
+		:hexpand true
+		(eventbox :class "profile"
+			:height 160
+			(box :class "profilebox"
+				:orientation "v"
+				:space-evenly false
+				:halign "fill"
+				(image :class "pfp"
+					:halign "center"
+					:path "/home/kiefciman/Pictures/pfp4.jpg"
+					:image-width 80
+					:image-height 80)
+				(box :class "username-box"
+					:orientation "v"
+					:halign "center"
+					:space-evenly false
+					(label :class "username"
+						:markup "<b> Kiefciman </b>"))))
+		(box :class "row2"
+			:height 170
+			:halign "fill"
+			:orientation "h"
+			:space-evenly true
+			:spacing 10
+			(eventbox :class "time"
+				(box :class "timebox"
+					:orientation "v"
+					:valign "start"
+					:halign "start"
+					:space-evenly false
+					(box :class "hour"
+						:valign "center"
+						:halign "center"
+						"${hour}:")
+					(box :class "minute"
+						"${minute}")))
+			(eventbox :class "weather"
+				(box :class "weatherbox"
+					:orientation "v"
+					:space-evenly false
+					(box :class "weatherascii"
+						"${weatherascii}")
+					(box :class "weathertype"
+						"${weather}")
+					(box :class "temp"
+						"${temp}°C"))))
+		(eventbox :class "calendar"
+			:height 170
+			(box :class "calendarbox"
+				:orientation "v"	
+				:valign "fill"
+				:halign "fill"
+				(box :class "calendarbox-inner"
+					:orientation "v"
+					:halign "center"
+					:space-evenly false
+					:width 295
+					(calendar :class "cal" 
+						:day calendar_day 
+						:month calendar_month 
+						:year calendar_year))))
+		(box :class "row4"
+			:height 170
+			:halign "fill"
+			:orientation "h"
+			:spacing 10
+			:space-evenly true
+			(eventbox :class "doyoufart"
+				(box :class "doyoufartbox"
+					:orientation "v"
+					:space-evenly false
+					:halign "fill"
+					:valign "fill"
+					(box :class "do"
+						"Do")
+					(box :class "you"
+						"You")
+					(box :class "fart"
+						"Fart?")))
+			(eventbox :class "todo"
+			(box :class "todobox"
+				:orientation "v"
+				(box :class "todotitle"
+					"TODO")
+				(box :class "todocount"
+					"Total: ${todo_total}")))))
+	(box :class "controlcenterwindow"
+		 :orientation "v"
+		 :space-evenly false
+		 :valign "fill"
+		 :halign "fill"
+		 (box :class "notifications"
+			  :height 580
+			  :space-evely false
+			  :valign "fill"
+			  :halign "fill")
+		 (box :class "controls"
+			  :orinetation "h"
+			  :space-evenly true
+			  :halign: "fill"
+			  :spacing 10
+			 (box :spacing -10
+				  :halign "center"
+				  :orientation "h"
+				  :space-evenly true
+			 (button :class "night-light"
+					 :onclick "~/.config/qtile/night-light.sh"
+					 :halign "start"
+					 "Night Light")
+		     (button :class "clear-notifications-button"
+					 :onclick "~/.config/qtile/clear-notifications.sh"
+					 :halign "end"
+				     " Clear all "))))))
+(defwindow dashboard
+	:monitor 0
+	:wm-ignore true
+(dashboardwidget))
+
+(defwidget dmenuwidget []
+	(box :class "dmenuwindow"
+		:orientation "v"
+		:vexpand false
+		(box :class "dmenubox"
+			:orientation "v"
+			(box :class "speakers"
+				:orientation "h"
+				(box :class "speaker-left")
+				(box :class "speaker-right"))
+			(box :class "buttons"
+				:orientation "h"
+				(box :class "buttons-left"
+					:height 50
+					:width 50
+					:orientation "v"
+					(button :class "button-up")
+					(box :class "buttons-lr"
+						:orientation "h"
+						(button :class "button-left")
+						(button :class "button-right"))
+					(button :class "button-down"))
+				(box :class "buttons-right"
+					:height 50
+					:width 50
+					:orientation "h"
+					(button :class "button-a"
+						"A")
+					(button :class "button-b"
+						"B"))))))
+(defwindow dmenu
+	:monitor 0
+	:geometry (geometry :width "950px"
+						:height "610px")
+	:wm-ignore true
+	:windowtype "desktop"
+(dmenuwidget))

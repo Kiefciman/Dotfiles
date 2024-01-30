@@ -1,0 +1,252 @@
+*{
+  all: unset;
+}
+
+$background: #05080a;
+$blue: #7aa2f7;
+$red: #F28FAD;
+$purple: #bb9af7;
+$green: #a6d189;
+$white: #D9E0EE;
+$gray: #302D41;
+$yellow: #fae3b0;
+$orange: #f8bd96;
+$cian: #89dceb;
+
+.calendar {
+  border: 4px solid $green;
+  background: $background;
+  color: $white;
+  border-radius: 20px;
+  font-family: Hack Nerd Font;
+  font-size: 15;
+  font-weight: bold;
+}
+
+calendar:selected {
+  color: $blue;
+}
+
+calendar.header {
+	color: $red;
+}
+
+calendar.button {
+	color: $yellow;
+}
+
+calendar.highlight {
+	color: $purple;
+}
+
+.powermenu {
+	border: 4px solid $blue;
+	background: $background;
+	color: $white;
+	border-radius: 0px;
+	font-size: 30px;
+}
+
+.btn {
+	color: $blue;
+	border-radius: 0px;
+}
+
+.btn:hover {
+	background: $blue;
+	color: $background;
+	border: 4px solid $blue;
+}
+
+.profile {
+	border: 4px solid $red;
+	background: $background;
+	color: $white;
+	border-radius: 20px;
+	font-size: 18px;
+}
+
+.pfp {
+	border: 4px solid $blue;
+}
+
+.username {
+	font-family: SourceCodePro;
+	font-weight: bold;
+	font-size: 17;
+	border: 3px solid $white;
+	border-radius: 10px;
+}
+
+.timewindow {
+	border: 4px solid $orange;
+	background: $background;
+	border-radius: 20px;
+}
+
+.hour {
+	font-family: CodeNewRoman Nerd Font;
+	font-weight: bold;
+	font-size: 60;
+	color: $yellow;
+}
+
+.dotdot {
+	font-family: CodeNewRoman Nerd Font;
+	font-weight: bold;
+	font-size: 40;
+	color: $green;
+}
+
+.minute {
+	font-family: CodeNewRoman Nerd Font;
+	font-weight: bold;
+	font-size: 54;
+	color: $red;
+}
+
+.imagebox {
+	border: 4px solid $blue;
+	border-radius: 0px;
+	background: $background;
+}
+
+.music-player {
+	background: $background;
+	border: 4px solid $purple;
+	border-radius: 20px;
+}
+
+.song {
+	font-family: Hack Nerd Font;
+	font-weight: bold;
+	font-size: 22;
+	color: $blue;
+}
+
+.buttons {
+	font-family: Hack Nerd Font Mono;
+	font-weight: bold;
+	font-size: 43;
+}
+
+.btn_play {
+	color: $green;
+}
+
+.btn_next {
+	color: $orange;
+	font-size: 32;
+}
+
+.btn_prev {
+	color: $orange;
+	font-size: 32;
+}
+
+.artist {
+	font-family: SourceCodePro;
+	font-weight: bold;
+	color: $red;
+	font-size: 15;
+}
+
+.controlcenter {
+	background: $background;
+	border: 4px solid $blue;
+	border-radius: 20px;
+}
+
+.clear-notifications-button {
+	padding-right: 25px;
+	padding-left: 25px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-family: Hack Nerd Font;
+	font-weight: bold;
+	font-size: 14;
+	background: $red;
+	border-radius: 10px;
+	color: $background;
+}
+
+.night-light {
+	font-family: Hack Nerd Font;
+	font-weight: bold;
+	font-size: 14;
+	background: $orange;
+	border-radius: 10px;
+	color: $background;
+	padding-right: 25px;
+	padding-left: 25px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border: 4px solid $orange;
+}
+
+.night-light:hover {
+	background: $green;
+	border: 4px solid $green;
+}
+
+.clear-notifications-button:hover {
+	background: $green;
+}
+
+.night-light:active {
+	background: $blue;
+	border: 4px solid $blue;
+}
+
+.clear-notifications-button:active {
+	background: $blue;
+}
+
+.keqingbox {
+	background: $purple;
+}
+
+.keqinggif {
+	border: 4px solid $white;
+}
+
+.keqingtime {
+	color: $background;
+	font-family: "CodeNewRoman Nerd Font";
+	font-weight: bold;
+	font-size: 16;
+}
+
+.todobox {
+	background: $background;
+	border: 4px solid $blue;
+	border-radius: 20px;
+}
+
+.todo-title {
+	color: $red;
+	font-family: "CodeNewRoman Nerd Font";
+	font-weight: bold;
+	font-size: 26;
+}
+
+.todo-total {
+	color: $purple;
+	font-family: "CodeNewRoman Nerd Font";
+	font-weight: bold;
+	font-size: 18;
+}
+
+.todo-today {
+	color: $yellow;
+	font-family: "CodeNewRoman Nerd Font";
+	font-weight: bold;
+	font-size: 18;
+}
+
+.todo-unscheduled {
+	color: $cian;
+	font-family: "CodeNewRoman Nerd Font";
+	font-weight: bold;
+	font-size: 18;
+}
