@@ -1,7 +1,7 @@
 ## Kiefciman's personal Dotfiles
 
 ### Qtile rice:
-![]()
+![](https://github.com/Kiefciman/Dotfiles/blob/master/Pictures/qtile.png)
 
-### For dwm rice:
-[Go here]()
+### [DWM rice](https://github.com/Kiefciman/dwm-kiefciman):
+![](https://github.com/Kiefciman/dwm-kiefciman/blob/main/ss.png)
