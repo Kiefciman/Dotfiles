@@ -119,7 +119,7 @@
 		 :halign "fill"
 		 (box :class "notifications"
 			  :height 580
-			  :space-evely false
+			  :space-evenly false
 			  :valign "fill"
 			  :halign "fill")
 		 (box :class "controls"
@@ -181,3 +181,303 @@
 	:wm-ignore true
 	:windowtype "desktop"
 (dmenuwidget))
+
+(defwidget nokiawidget []
+    (box 
+        :class 'nokia-base'
+        :width 260
+        :space-evenly false
+        :orientation 'v'
+        :vexpand false
+        :hexpand false
+        :halign 'fill'
+        :valign 'start'
+        (box 
+            :class 'nokia-speaker'
+            :height 20
+            :width 80
+            :hexpand false
+            :vexpand false
+            :valign 'start'
+            :halign 'center'
+        )
+        (box 
+            :class 'nokia-screen'
+            :space-evenly false
+            :orientation 'v'
+            :height 300
+            :valign 'center'
+            :halign 'fill'
+            (box
+                :class 'nokia-hour'
+                :valign 'center'
+                :halign 'center'
+				'${hour}'
+            )
+            (box
+                :class 'nokia-minute'
+                :valign 'center'
+                :halign 'center'
+                '${minute}'
+            )
+            (image :class 'nokia-neko-blush'
+					:halign 'center'
+                    :valign 'end'
+					:path '/home/kiefciman/Pictures/nekoblush.gif'
+            )
+        )
+        (box
+            :class 'nokia-keyboard'
+            :height 200
+            :orientation 'v'
+            :vexpand false
+            :hexpand false
+            :valign 'end'
+            :halign 'fill'
+            (box
+                :class 'nokia-upper-buttons'
+                :orientation 'h'
+                :vexpand false
+                :hexpand false
+                :valign 'fill'
+                :halign 'fill'
+                (eventbox
+                    :class 'nokia-button-highlight-select'
+                    (box
+                        :class 'nokia-select-button'
+                    )
+                )
+                (eventbox
+                    :class 'nokia-button-highlight-center'
+                    (box
+                        :class 'nokia-center-button'
+                    )
+                )
+                (eventbox
+                    :class 'nokia-button-highlight-select'
+                    (box
+                        :class 'nokia-select-button'
+                    )
+                )
+            )
+            (centerbox
+                :class 'nokia-keyboard-row'
+                :orientation 'h'
+                :vexpand false
+                :hexpand false
+                :valign 'fill'
+                :halign 'center'
+                (eventbox
+                    :class 'nokia-button-highlight'
+                    (box
+                        :class 'nokia-button-1'
+                        :vexpand false
+                        :hexpand false
+                        :valign 'center'
+                        :halign 'start'
+                        (box 
+                            :class 'nokia-button-number'
+                            :halign 'start'
+                            '1'
+                        )
+                    )
+                )
+                (eventbox
+                    :class 'nokia-button-highlight'
+                    (box
+                        :class 'nokia-button-2'
+                        :vexpand false
+                        :hexpand false
+                        :valign 'center'
+                        :halign 'start'
+                        (box 
+                            :class 'nokia-button-number'
+                            :halign 'start'
+                            '2 ABC '
+                        )
+                    )
+                )
+                (eventbox
+                    :class 'nokia-button-highlight'
+                    (box
+                        :class 'nokia-button-3'
+                        :vexpand false
+                        :hexpand false
+                        :valign 'center'
+                        :halign 'start'
+                        (box 
+                            :class 'nokia-button-number'
+                            :halign 'start'
+                            '3 DEF '
+                        )
+                    )
+                )
+            )
+            (centerbox
+                :class 'nokia-keyboard-row'
+                :orientation 'h'
+                :vexpand false
+                :hexpand false
+                :valign 'fill'
+                :halign 'center'
+                (eventbox
+                    :class 'nokia-button-highlight'
+                    (box
+                        :class 'nokia-button-4'
+                        :vexpand false
+                        :hexpand false
+                        :valign 'center'
+                        :halign 'start'
+                        (box 
+                            :class 'nokia-button-number'
+                            :halign 'start'
+                            '4 GHI '
+                        )
+                    )
+                )
+                (eventbox
+                    :class 'nokia-button-highlight'
+                    (box
+                        :class 'nokia-button-5'
+                        :vexpand false
+                        :hexpand false
+                        :valign 'center'
+                        :halign 'start'
+                        (box 
+                            :class 'nokia-button-number'
+                            :halign 'start'
+                            '5 JKL '
+                        )
+                    )
+                )
+                (eventbox
+                    :class 'nokia-button-highlight'
+                    (box
+                        :class 'nokia-button-6'
+                        :vexpand false
+                        :hexpand false
+                        :valign 'center'
+                        :halign 'start'
+                        (box 
+                            :class 'nokia-button-number'
+                            :halign 'start'
+                            '6 MNO '
+                        )
+                    )
+                )
+            )
+            (centerbox
+                :class 'nokia-keyboard-row'
+                :orientation 'h'
+                :vexpand false
+                :hexpand false
+                :valign 'fill'
+                :halign 'center'
+                (eventbox
+                    :class 'nokia-button-highlight'
+                    (box
+                        :class 'nokia-button-7'
+                        :vexpand false
+                        :hexpand false
+                        :valign 'center'
+                        :halign 'start'
+                        (box 
+                            :class 'nokia-button-number'
+                            '7 PQRS'
+                        )
+                    )
+                )
+                (eventbox
+                    :class 'nokia-button-highlight'
+                    (box
+                        :class 'nokia-button-8'
+                        :vexpand false
+                        :hexpand false
+                        :valign 'center'
+                        :halign 'start'
+                        (box 
+                            :class 'nokia-button-number'
+                            '8 TUV '
+                        )
+                    )
+                )
+                (eventbox
+                    :class 'nokia-button-highlight'
+                    (box
+                        :class 'nokia-button-9'
+                        :vexpand false
+                        :hexpand false
+                        :valign 'center'
+                        :halign 'start'
+                        (box 
+                            :class 'nokia-button-number'
+                            '9 WXYZ'
+                        )
+                    )
+                )
+            )
+            (centerbox
+                :class 'nokia-keyboard-row'
+                :orientation 'h'
+                :vexpand false
+                :hexpand false
+                :valign 'fill'
+                :halign 'center'
+                (eventbox
+                    :class 'nokia-button-highlight'
+                    (box
+                        :class 'nokia-button-*'
+                        :vexpand false
+                        :hexpand false
+                        :valign 'center'
+                        :halign 'start'
+                        (box 
+                            :class 'nokia-button-number'
+                            '*'
+                        )
+                    )
+                )
+                (eventbox
+                    :class 'nokia-button-highlight'
+                    (box
+                        :class 'nokia-button-0'
+                        :vexpand false
+                        :hexpand false
+                        :valign 'center'
+                        :halign 'start'
+                        (box 
+                            :class 'nokia-button-number'
+                            '0 _ '
+                        )
+                    )
+                )
+                (eventbox
+                    :class 'nokia-button-highlight'
+                    (box
+                        :class 'nokia-button-#'
+                        :width 50
+                        :vexpand false
+                        :hexpand false
+                        :valign 'center'
+                        :halign 'start'
+                        (box 
+                            :class 'nokia-button-number'
+                            '#'
+                        )
+                    )
+                )
+            )
+        )
+    )
+)
+
+(defwindow nokia
+	:monitor 0
+    :geometry
+        (geometry
+            :x '1050px'
+            :y '100px'
+        )
+	:wm-ignore true
+	:windowtype 'normal'
+(nokiawidget))

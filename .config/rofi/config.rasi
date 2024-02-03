@@ -43,26 +43,30 @@ configuration {
     selected-active-background:  @blue;
 }
 window {
-    background-color: @background;
+    background-color: @blue;
     border:           3;
     padding:          5;
-	border-color:     @blue;
+	border-color:     @foreground;
 	font:			  "SauceCodePro Nerd Font Bold 12";
-	height:			  250px;
-	width:			  400px;
-	border-radius:	  0px;
+	height:			  500px;
+	width:			  300px;
+	border-radius:	  20px;
 }
 mainbox {
     border:  0;
-    padding: 0;
+    margin: 10px 10px 10px 10px;
 }
 message {
     border:       2px 0px 0px ;
     border-color: @separatorcolor;
     padding:      1px ;
+    background: @red;
+    margin: 10px 10px 10px 10px;
 }
 textbox {
     text-color: @foreground;
+    content: "aaaaaaaaaaaaaa";
+    margin: 10px 10px 10px 10px;
 }
 listview {
     fixed-height: 0;
@@ -122,7 +126,7 @@ element.alternate.active {
     text-color:       @alternate-active-foreground;
 }
 scrollbar {
-    width:        4px ;
+    width:        2px ;
     border:       0;
     handle-width: 8px ;
     padding:      0;
