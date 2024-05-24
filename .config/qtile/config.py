@@ -15,6 +15,7 @@ from layouts import layouts, floating_layout
 from widgets_settings import widget_defaults, extension_defaults
 from screens import init_screens, switch_screens
 from move_windows import window_to_prev_group, window_to_next_group, window_to_previous_screen, window_to_next_screen
+from autostart import autostart
 
 if __name__ in ["config", "__main__"]:
     screens = init_screens()
